@@ -14,7 +14,10 @@ _report_ folder stores report detailing methodology and results from data set
 ![Creative Common License](https://i.creativecommons.org/l/by/4.0/88x31.png)
 
 
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+All the media content(narrative and images) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
+
+All source code (i.e. code in R script files) is licensed under GNU General Public License, version 3. See the `LICENSE` file
+for more information
 
 Author: Yuyu Zhang
 
