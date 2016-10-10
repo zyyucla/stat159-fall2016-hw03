@@ -1,5 +1,5 @@
 #Read data 
-dat<-read.csv("../data/Advertising.csv",row.names=1)
+dat<-read.csv("../../data/Advertising.csv",row.names=1)
 
 #Linear regression between Sales and TV
 reg_tv<-lm(Sales~TV, data=dat)
