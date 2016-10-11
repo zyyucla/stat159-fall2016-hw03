@@ -1,11 +1,11 @@
 #Read data and inspect data frame
-dat<-read.csv("../data/Advertising.csv",row.names=1)
+dat<-read.csv("../../data/Advertising.csv",row.names=1)
 head(dat)
 str(dat)
 summary(dat)
 
 #Output result to the file
-sink("../data/eda-output.txt")
+sink("../../data/eda-output.txt")
 summary(dat)
 cor(dat)
 sink()
