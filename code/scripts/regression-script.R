@@ -6,9 +6,7 @@ mul_reg<-lm(Sales~TV+Radio+Newspaper, data=dat)
 mulsum_reg<-summary(mul_reg)
 names(mulsum_reg)
 save(mul_reg, file="../../data/regression.RData")
-png("../../images/test.png")
-par(mfrow=c(2,2))
-plot(mul_reg)
+
 
 #TV-Sales scatterplot
 reg_tv<-lm(Sales~TV,data=dat)
@@ -29,4 +27,7 @@ plot(dat$Newspaper,dat$Sales,main="Linear regression of Newspaper on Sales",xlab
 abline(reg_newspaper,col="#bd0300",lwd=2)
 
 
-#
+#Residual Plot
+png("../../images/residual-plot.png")
+plot(mul_reg,which=1)
+
