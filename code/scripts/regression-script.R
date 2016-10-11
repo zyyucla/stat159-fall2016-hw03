@@ -31,3 +31,11 @@ abline(reg_newspaper,col="#bd0300",lwd=2)
 png("../../images/residual-plot.png")
 plot(mul_reg,which=1)
 
+#Normal Q-Q Plot
+png("../../images/normal-qq-plot.png")
+plot(mul_reg,which=2)
+
+#Scale-Location-Plot 
+png("../../images/scale-location-plot.png)
+plot(mul_reg,which=3)
+
