@@ -39,3 +39,4 @@ plot(mul_reg,which=2)
 png("../../images/scale-location-plot.png)
 plot(mul_reg,which=3)
 
+dev.off()
