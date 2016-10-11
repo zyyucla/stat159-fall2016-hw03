@@ -7,7 +7,8 @@ mulsum_reg<-summary(mul_reg)
 names(mulsum_reg)
 save(mul_reg, file="../../data/regression.RData")
 png("../../images/test.png")
-plot(mul_reg, which=1:4)
+par(mfrow=c(2,2))
+plot(mul_reg)
 
 #TV-Sales scatterplot
 reg_tv<-lm(Sales~TV,data=dat)
