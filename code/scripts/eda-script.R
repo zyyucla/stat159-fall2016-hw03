@@ -7,12 +7,15 @@ cor(dat)
 
 #Output result to the file
 sink("../../data/eda-output.txt")
+cat("Summary Statistics")
 summary(dat)
+cat("\n")
+cat("Correlation Matrix")
 cor(dat)
 sink()
 
 #save correlation matrix into binary file
-save(cor(dat),file="../../data/correlation-matrix.RData")
+#save(cor(dat),file="../../data/correlation-matrix.RData")
 
 #create histogram of all the variables
 png("../../images/histogram-tv.png")
