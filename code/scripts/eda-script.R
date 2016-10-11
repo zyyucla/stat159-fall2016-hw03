@@ -7,6 +7,7 @@ summary(dat)
 #Output result to the file
 sink("../data/eda-output.txt")
 summary(dat)
+cor(dat)
 sink()
 
 
