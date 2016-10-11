@@ -17,7 +17,8 @@ cor(dat)
 sink()
 
 #save correlation matrix into binary file
-save(cor(dat),file="../../data/correlation-matrix.RData")
+matrix<-as.data.frame(cor(dat))
+save(matrix,file="../../data/correlation-matrix.RData")
 
 #create histogram of all the variables
 png("../../images/histogram-tv.png")
