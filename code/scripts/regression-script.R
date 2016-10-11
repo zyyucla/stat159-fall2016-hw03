@@ -36,7 +36,7 @@ png("../../images/normal-qq-plot.png")
 plot(mul_reg,which=2)
 
 #Scale-Location-Plot 
-png("../../images/scale-location-plot.png)
+png("../../images/scale-location-plot.png")
 plot(mul_reg,which=3)
 
 dev.off()
