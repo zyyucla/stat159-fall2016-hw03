@@ -7,11 +7,11 @@ cor(dat)
 
 #Output result to the file
 sink("../../data/eda-output.txt")
-cat("Summary Statistics")
+print('Summary Statistics of Advertising Variables')
 cat("\n")
 summary(dat)
 cat("\n\n")
-cat("Correlation Matrix")
+print("Correlation Matrix")
 cat("\n")
 cor(dat)
 sink()
