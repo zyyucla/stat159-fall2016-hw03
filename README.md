@@ -11,6 +11,12 @@ _images_ folder stores plots from corresponding data set
 _report_ folder stores report detailing methodology and results from data set
 
 
+How to use this repository:
+1. Use Advertising.csv from _data_ folder as your basic data set
+2. Then use _eda-script.R_ to get summary statistics of the linear model, use _regression-script.R_ to get the linear model and its relevant information.
+3. _eda-script.R_ and _regression-script.R_ also contains code for creating all images in the _images_ folder
+4. On command line, use makefile to create all relevant files, including the final report in the _report_ folder
+
 ![Creative Common License](https://i.creativecommons.org/l/by/4.0/88x31.png)
 
 
