@@ -8,19 +8,22 @@ names(mulsum_reg)
 save(mul_reg, file="../../data/regression.RData")
 
 #TV-Sales scatterplot
+reg_tv<-lm(Sales~TV)
 png("../../images/scatterplot-tv-sales.png")
 plot(dat$TV,dat$Sales,main="Linear regression of TV ads on Sales",xlab="TV", ylab="Sales",pch = 19,col="#8e8f94")
-abline(reg,col="#bd0300",lwd=2)
+abline(reg_tv,col="#bd0300",lwd=2)
 
 #Radio-Sales scatterplot
+reg_radio<-lm(Sales~Radio)
 png("../../images/scatterplot-radio-sales.png")
 plot(dat$Radio,dat$Sales,main="Linear regression of Radio on Sales",xlab="Radio", ylab="Sales",pch = 19,col="#8e8f94")
-abline(reg,col="#bd0300",lwd=2)
+abline(reg_radio,col="#bd0300",lwd=2)
 
 #Newspaper-Sales scatterplot
+reg_newspaper<-lm(Sales~Newspaper)
 png("../../images/scatterplot-newspaper-sales.png")
 plot(dat$Newspaper,dat$Sales,main="Linear regression of Newspaper on Sales",xlab="Newspaper", ylab="Sales",pch = 19,col="#8e8f94")
-abline(reg,col="#bd0300",lwd=2)
+abline(reg_newspaper,col="#bd0300",lwd=2)
 
 
 #
