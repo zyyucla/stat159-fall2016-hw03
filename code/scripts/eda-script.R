@@ -10,6 +10,8 @@ summary(dat)
 cor(dat)
 sink()
 
+#save correlation matrix into binary file
+save(cor(dat), "../../data/correlation-matrix.RData")
 
 #create histogram of all the variables
 png("../images/histogram-tv.png")
