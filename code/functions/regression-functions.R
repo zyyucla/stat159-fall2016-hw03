@@ -3,7 +3,7 @@
 #output:RSS(numerical value)
 
 residual_sum_squares<-function(x){
-
+   sum(x$residuals^2)
  }
 
 
