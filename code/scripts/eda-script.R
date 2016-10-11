@@ -3,6 +3,7 @@ dat<-read.csv("../../data/Advertising.csv",row.names=1)
 head(dat)
 str(dat)
 summary(dat)
+cor(dat)
 
 #Output result to the file
 sink("../../data/eda-output.txt")
@@ -11,7 +12,7 @@ cor(dat)
 sink()
 
 #save correlation matrix into binary file
-save(cor(dat), "../../data/correlation-matrix.RData")
+save(cor(dat),file="../../data/correlation-matrix.RData")
 
 #create histogram of all the variables
 png("../../images/histogram-tv.png")
