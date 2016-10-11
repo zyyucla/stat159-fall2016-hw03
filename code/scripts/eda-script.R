@@ -7,10 +7,10 @@ cor(dat)
 
 #Output result to the file
 sink("../../data/eda-output.txt")
-cat("Summary Statistics")
+cat("Summary Statistics"+"\n")
 summary(dat)
 cat("\n")
-cat("Correlation Matrix")
+cat("Correlation Matrix"+"\n")
 cor(dat)
 sink()
 
