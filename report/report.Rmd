@@ -50,7 +50,11 @@ Coefficient estimates of the least squares model is shown below:
 
 Correlation matrix of three medias and sales is summarized in the table below:
 ```{r,echo=FALSE, results="asis", comment=FALSE}
-    
+   load("../data/correlation-matrix.RData")
+   library(xtable)
+   cor_table<-xtable(matrix,caption="Table 5: Correlation matrix of TV, radio, newspaper and sales",digits=4,floating=FALSE)
+   print(cor_table, caption.placement = "top",type="html")
+   print("\n\n")   
 ```
 
 Lastly, RSE, R square and F-statistic of the least square model is summarized in the table below:
