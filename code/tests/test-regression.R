@@ -1,8 +1,9 @@
 source("../functions/regression-functions.R")
 
-#test the residual_sum_squares function
 context("Test for different functions")
-test_that(
+#test the residual_sum_squares function
+test_that
+
 
 
 #test the total_sum_squares function
