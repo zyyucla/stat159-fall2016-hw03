@@ -62,8 +62,17 @@ Correlation matrix of three medias and sales is summarized in the table below:
 ```
 
 Lastly, RSE, R square and F-statistic of the least square model is summarized in the table below:
+```{r,echo=FALSE, results="asis", comment=FALSE}
+   load("../data/regression.RData")
+   print("Table 6: RSE,R^2 and F-statistic of least square model")
+   print("\n")
+   Quantity               | Value
+-----------------------|-------
+Residual Standard Error| summary(mul_reg)$sigma
+R-squared              | summary(mul_reg)$r.squared
+F-statistic            | summary(mul_reg)$fstatistic
 
-
+```
 Answers to additional questions:
 1. By looking at F-statistic, we can see if there's relationship between the response and predictors. Since the F-statistics from multiple regression model is 570>1, it means that at least one of the media is related to the sale
 2. Only a subset of predictors are helpful
