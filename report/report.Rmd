@@ -1,0 +1,42 @@
+###**Multiple Regression Analysis** 
+  _Yuyu Zhang_
+
+####**Abstract**
+In this report we extend the _simple regression analysis_ from last time and try to reproduce the main results displayed in section 3.2 _Multiple Linear Regression_ of the book  **An introduction to statistical Learning **
+
+####**Introduction**
+The goal is to extend the analysis of advertising data to see, besides TV, if other two medias newspaper and radio have an effect on the sales of a particular product. And if so, develop an accurate model that can be used to predict sales on the basis of three media budgets. 
+
+####**Data**
+The Advertising data set consists of the **Sales** (in thousands of units) of a particular product in 200 different
+markets, along with advertising budgets (in thousands of dollars) for the product in each of those markets for
+three different media: **TV,** **Radio**, and **Newspaper**.
+
+####**Methodology**
+The multiple linear regression model gives each predictor a separate slope coefficient in a single model:
+       _Sales_=
+ To estimate each coefficient we fit a regression model via the least square criterion.  For RSE, R squared and F-statistics we used the formulas in the book to carry computation.
+  
+####**Results**
+The simple linear regression model for each media is shown in the tables below:
+
+
+Coefficient estimates of the least squares model is shown below:
+
+
+Correlation matrix of three medias and sales is summarized in the table below:
+
+Lastly, RSE, R square and F-statistic of the least square model is summarized in the table below:
+
+
+Answers to additional questions:
+1. By looking at F-statistic, we can see if there's relationship between the response and predictors. Since the F-statistics from multiple regression model is 570>1, it means that at least one of the media is related to the sale
+2. Only a subset of predictors are helpful
+3. Combining R square, RSE and p-value, we conclude that a model that uses TV and radio expenditures to
+predict sales is substantially better than one that uses only TV advertising. Adding newspaper almost have no effects on the product sales
+4. We would use both 95% confidence interval and prediction interval to quantify the uncertainty.  The prediction
+interval is substantially wider than the confidence interval, reflecting the increased uncertainty about sales for a given city in comparison to the average sales over many locations.
+
+####**Conclusions**
+In conclusion,  we used multiple regression models to visualize the relationship between  three advertising medias and their effects on product sales. The analysis suggests that a model with TV and radio as predictors are the more suitable one while newspaper has negligible effects on the product sales
+  
