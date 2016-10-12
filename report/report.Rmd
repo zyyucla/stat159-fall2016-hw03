@@ -75,9 +75,12 @@ F-statistic            | summary(mul_reg)$fstatistic
 ```
 Answers to additional questions:
 1.   By looking at F-statistic, we can see if there's relationship between the response and predictors. Since the F-statistics from multiple regression model is 570>1, it means that at least one of the media is related to the sale
+
 2.   Only a subset of predictors are helpful
+
 3.   Combining R square, RSE and p-value, we conclude that a model that uses TV and radio expenditures to
 predict sales is substantially better than one that uses only TV advertising. Adding newspaper almost have no effects on the product sales
+
 4.  We would use both 95% confidence interval and prediction interval to quantify the uncertainty.  The prediction
 interval is substantially wider than the confidence interval, reflecting the increased uncertainty about sales for a given city in comparison to the average sales over many locations.
 
