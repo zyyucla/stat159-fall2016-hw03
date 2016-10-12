@@ -14,17 +14,21 @@ three different media: **TV,** **Radio**, and **Newspaper**.
 
 ####**Methodology**
 The multiple linear regression model gives each predictor a separate slope coefficient in a single model:
-       _Sales_=
+       $$Sales=\beta_0+\beta_1TV+\beta_2Radio+\beta_3Newspaper$$
  To estimate each coefficient we fit a regression model via the least square criterion.  For RSE, R squared and F-statistics we used the formulas in the book to carry computation.
   
 ####**Results**
 The simple linear regression model for each media is shown in the tables below:
 
 
+
+
 Coefficient estimates of the least squares model is shown below:
 
 
+
 Correlation matrix of three medias and sales is summarized in the table below:
+
 
 Lastly, RSE, R square and F-statistic of the least square model is summarized in the table below:
 
