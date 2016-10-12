@@ -5,6 +5,7 @@ dat<-read.csv("../../data/Advertising.csv",row.names=1)
 mul_reg<-lm(Sales~TV+Radio+Newspaper, data=dat)
 mulsum_reg<-summary(mul_reg)
 names(mulsum_reg)
+names(mul_reg)
 save(mul_reg,file="../../data/regression.RData")
 
 
