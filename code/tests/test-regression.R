@@ -32,8 +32,8 @@ test_that ("R square function is working",{
 
 #test the F-statistic function
 test_that ("F-statistic function is working"{
-   expect_equal(f-statistic(reg),regsum$fstatistic[1])
-   expect_length(length(f-statistic(reg)),1)
+   expect_equal(f_statistic(reg),regsum$fstatistic[1])
+   expect_length(length(f_statistic(reg)),1)
    expect_gt(f_statistic(reg), 0)
 })
 
