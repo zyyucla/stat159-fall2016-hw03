@@ -20,9 +20,29 @@ To estimate each coefficient we fit a regression model via the least square crit
   
 ####**Results**
 The simple linear regression model for each media is shown in the tables below:
-
-
-
+```{r,echo=FALSE, results="asis", comment=FALSE}
+ dat<-read.csv("../../data/Advertising.csv",row.names=1)
+ reg_tv<-lm(Sales~TV, data=dat)
+ library(xtable)
+ 
+ reg_tv_coe<-summary(reg_tv)$coefficients
+ reg_tv_table<-xtable(reg_tv_coe,caption="Table 1: Simple Regression of Sales on TV",digits=2,floating=FALSE)
+ print(reg_tv_table, caption.placement = "top",type="html")
+ print("\n\n")
+ 
+ reg_radio<-lm(Sales~Radio, data=dat)
+ reg_radio_coe<-summary(reg_radio_coe)$coefficients
+ reg_radio_table<-xtable(reg_radio_coe,caption="Table 2: Simple Regression of Sales on Radio",digits=2,floating=FALSE)
+ print(reg_radio_table, caption.placement = "top",type="html")
+ print("\n\n")
+ 
+ reg_np<-lm(Sales~Newspaper, data=dat)
+ reg_np_coe<-summary(reg_np_coe)$coefficients
+ reg_np_table<-xtable(reg_np_coe,caption="Table 3: Simple Regression of Sales on Newspaper",digits=2,floating=FALSE)
+ print(reg_np_table, caption.placement = "top",type="html")
+ print("\n\n")
+ 
+```
 
 Coefficient estimates of the least squares model is shown below:
 
