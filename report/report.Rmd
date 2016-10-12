@@ -49,7 +49,9 @@ Coefficient estimates of the least squares model is shown below:
 
 
 Correlation matrix of three medias and sales is summarized in the table below:
-
+```{r,echo=FALSE, results="asis", comment=FALSE}
+    
+```
 
 Lastly, RSE, R square and F-statistic of the least square model is summarized in the table below:
 
