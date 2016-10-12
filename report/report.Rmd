@@ -45,9 +45,13 @@ The simple linear regression model for each media is shown in the tables below:
 ```
 
 Coefficient estimates of the least squares model is shown below:
-
-
-
+```{r,echo=FALSE, results="asis", comment=FALSE}
+   load("../data/regression.RData")
+   library(xtable)
+   reg_table<-xtable(summary(mul_reg)$coefficients,caption="Table 3:Coefficient estimates of the least squares model",digits=4,floating=FALSE)
+   print(reg_table,caption.placement = "top",type="html")
+   print("\n\n")   
+```
 Correlation matrix of three medias and sales is summarized in the table below:
 ```{r,echo=FALSE, results="asis", comment=FALSE}
    load("../data/correlation-matrix.RData")
