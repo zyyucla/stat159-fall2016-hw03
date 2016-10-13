@@ -82,6 +82,7 @@ Lastly, RSE, R square and F-statistic of the least square model is summarized in
 ```
 <hr>
 Answers to additional questions:
+
 * When there is no relationship between the response and predictors, one would expect the F-statistic to take on a value close to 1. Since the F-statistics from multiple regression model is 570>1, it provides compelling evidence against the null hypothesis.In other words, the large F-statistic suggests that at least one of the advertising media must be related to sales.
 
 *  We use backward selection. First include all the variables and then inspect the p-value. We set the criteria for variable being relevant is when p-value is less than 0.01. From Table 3, it's obvious that newspaper exceeds the p-value threshold and is the least statistically significant. Therefore, we say that only TV and Radio have observable effects on sales.
