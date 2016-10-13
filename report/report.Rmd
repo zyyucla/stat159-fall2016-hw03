@@ -73,18 +73,20 @@ R-squared              | summary(mul_reg)$r.squared
 F-statistic            | summary(mul_reg)$fstatistic
 
 ```
+<hr>
 Answers to additional questions:
-* By looking at F-statistic, we can see if there's relationship between the response and predictors. Since the F-statistics from multiple regression model is 570>1, it means that at least one of the media is related to the sale
+* When there is no relationship between the response and predictors, one would expect the F-statistic to take on a value close to 1. Since the F-statistics from multiple regression model is 570>1, it provides compelling evidence against the null hypothesis.In other words, the large F-statistic suggests that at least one of the advertising media must be related to sales.
 
-*  Only a subset of predictors are helpful
+*  We use backward selection. First include all the variables and then inspect the p-value. We set the criteria for variable being relevant is when p-value is less than 0.01. From Table 3, it's obvious that newspaper exceeds the p-value threshold and is the least statistically significant. Therefore, we say that only TV and Radio have observable effects on sales.
 
-*  Combining R square, RSE and p-value, we conclude that a model that uses TV and radio expenditures to
-predict sales is substantially better than one that uses only TV advertising. Adding newspaper almost have no effects on the product sales.
+*  Two of the most common numerical measures of model fit are the RSE and R^2. The model that uses all three advertising media
+to predict sales has an R2 of 0.8972. On the other hand, the model that uses only TV and radio to predict sales has an R2 value of 0.89719. In other words, there is a small increase in R2 if we include newspaper advertising
+in the model that already contains TV and radio advertising.. The fact that adding newspaper advertising to the model containing only TV and radio advertising leads to just a tiny increase in R2 provides additional evidence that newspaper can be dropped from the model.The model that contains only TV and radio as predictors has an RSE of 1.681, and the model that also contains newspaper as a predictor has an RSE of 1.686.In contrast, the model that contains only TV has an RSE of 3.26.This corroborates our previous conclusion that a model that uses TV and radio expenditures to predict sales is much
+more accurate (on the training data) than one that only uses TV spending.
 
-* We would use both 95% confidence interval and prediction interval to quantify the uncertainty.  The prediction
-interval is substantially wider than the confidence interval, reflecting the increased uncertainty about sales for a given city in comparison to the average sales over many locations.
-
+* We would use both 95% confidence interval and prediction interval to quantify the uncertainty. For example, given that 
+$100,000 is spent on TV advertising and $20,000 is spent on radio advertising in each city, the 95 % confidence interval is [10,985, 11,528]. On the other hand,  given that $100,000 is interval spent on TV advertising and $20,000 is spent on radio advertising in that city the 95 % prediction interval is [7,930, 14,580].Both intervals are centered at 11,256, but that the prediction interval is substantially wider than the confidence interval, reflecting the increased uncertainty about sales for a given city in comparison to the average sales over many locations
 
 ####**Conclusions**
-In conclusion,  we used multiple regression models to visualize the relationship between  three advertising medias and their effects on product sales. The analysis suggests that a model with TV and radio as predictors are the more suitable one while newspaper has negligible effects on the product sales
+In conclusion,  we used multiple regression models to visualize the relationship between three advertising medias and their effects on product sales. The analysis suggests that a model with TV and radio as predictors are the more suitable one while newspaper has negligible effects on the product sales
   
