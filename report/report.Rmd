@@ -1,3 +1,6 @@
+---
+output: html_document
+---
 ###**Multiple Regression Analysis** 
   _Yuyu Zhang_
 
@@ -21,26 +24,26 @@ To estimate each coefficient we fit a regression model via the least square crit
 ####**Results**
 The simple linear regression model for each media is shown in the tables below:
 ```{r,echo=FALSE, results="asis", comment=FALSE}
- dat<-read.csv("../../data/Advertising.csv",row.names=1)
+ dat<-read.csv("../data/Advertising.csv",row.names=1)
  reg_tv<-lm(Sales~TV, data=dat)
  library(xtable)
  
  reg_tv_coe<-summary(reg_tv)$coefficients
  reg_tv_table<-xtable(reg_tv_coe,caption="Table 1: Simple Regression of Sales on TV",digits=2,floating=FALSE)
- print(reg_tv_table, caption.placement = "top",type="html")
- print("\n\n")
+ print(reg_tv_table, caption.placement = "top",type="html",output="report.html")
+ cat("\n\n")
  
  reg_radio<-lm(Sales~Radio, data=dat)
- reg_radio_coe<-summary(reg_radio_coe)$coefficients
+ reg_radio_coe<-summary(reg_radio)$coefficients
  reg_radio_table<-xtable(reg_radio_coe,caption="Table 2: Simple Regression of Sales on Radio",digits=2,floating=FALSE)
- print(reg_radio_table, caption.placement = "top",type="html")
- print("\n\n")
+ print(reg_radio_table, caption.placement = "top",type="html",output="report.html")
+ cat("\n\n")
  
  reg_np<-lm(Sales~Newspaper, data=dat)
- reg_np_coe<-summary(reg_np_coe)$coefficients
+ reg_np_coe<-summary(reg_np)$coefficients
  reg_np_table<-xtable(reg_np_coe,caption="Table 3: Simple Regression of Sales on Newspaper",digits=2,floating=FALSE)
- print(reg_np_table, caption.placement = "top",type="html")
- print("\n\n")
+ print(reg_np_table, caption.placement = "top",type="html",output="report.html")
+ cat("\n\n")
  
 ```
 
@@ -49,30 +52,35 @@ Coefficient estimates of the least squares model is shown below:
    load("../data/regression.RData")
    library(xtable)
    reg_table<-xtable(summary(mul_reg)$coefficients,caption="Table 3:Coefficient estimates of the least squares model",digits=4,floating=FALSE)
-   print(reg_table,caption.placement = "top",type="html")
-   print("\n\n")   
+   print(reg_table,caption.placement = "top",type="html",output="report.html")
+   
 ```
 Correlation matrix of three medias and sales is summarized in the table below:
 ```{r,echo=FALSE, results="asis", comment=FALSE}
    load("../data/correlation-matrix.RData")
    library(xtable)
-   cor_table<-xtable(matrix,caption="Table 5: Correlation matrix of TV, radio, newspaper and sales",digits=4,floating=FALSE)
-   print(cor_table, caption.placement = "top",type="html")
-   print("\n\n")   
+   cor_table<-xtable(matrix,caption="Table 4: Correlation matrix of TV, radio, newspaper and sales",digits=4,floating=FALSE)
+   print(cor_table, caption.placement = "top",type="html",output="report.html")
+   cat("\n\n")   
 ```
 
 Lastly, RSE, R square and F-statistic of the least square model is summarized in the table below:
 ```{r,echo=FALSE, results="asis", comment=FALSE}
    load("../data/regression.RData")
-   print("Table 6: RSE,R^2 and F-statistic of least square model")
-   print("\n")
-   Quantity               | Value
------------------------|-------
-Residual Standard Error| summary(mul_reg)$sigma
-R-squared              | summary(mul_reg)$r.squared
-F-statistic            | summary(mul_reg)$fstatistic
-
+   source("../code/functions/regression-functions.R")
+  stats<-data.frame(Quantity=c("Residual standard error","R squared","F-statistic"),
+            Value=c(residual_std_error(mul_reg),r_squared(mul_reg),f_statistic(mul_reg)) )
+  stat_table<-xtable(stats,caption="Table 5:Other Relationship Statistics",digits=4,floating=FALSE)
+  print(stat_table,caption.placement="top",type="html",output="report.html")
+ 
+    # Quantity                Value
+#-----------------------|-------
+#Residual Standard Error| summary(mul_reg)$sigma
+#R-squared              | summary(mul_reg)$r.squared
+#F-statistic            | summary(mul_reg)$fstatistic
+    cat("\n\n")
 ```
+<hr>
 Answers to additional questions:
 * By looking at F-statistic, we can see if there's relationship between the response and predictors. Since the F-statistics from multiple regression model is 570>1, it means that at least one of the media is related to the sale
 
