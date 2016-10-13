@@ -13,7 +13,7 @@ regression:
 	cd code/scripts; Rscript regression-script.R
    
 report:
-	cd report && Rscript -r "Library(rmarkdown);render('report.Rmd')"
+	cd report && Rscript -e "library(rmarkdown);rmarkdown::render('report.rmd', 'pdf_document')"
  
 clean:
 	rm -f report/report.Rmd report/report.pdf
