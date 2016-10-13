@@ -12,7 +12,7 @@ residual_sum_squares<-function(x){
 #output:TSS (numerical value)
 total_sum_squares<-function(x){
    rss<-residual_sum_squares(x)
-   r2<summary(x)$r.squared
+   r2<-summary(x)$r.squared
    rss/(1-r2)
 }
 
@@ -20,7 +20,7 @@ total_sum_squares<-function(x){
 #input:a "lm" object
 #output:R square(numerical value)
 r_squared<-function(x){
-   r2<summary(x)$r.squared
+   r2<-summary(x)$r.squared
 }
 
 #description:computes the F-statistic of a "lm" object
