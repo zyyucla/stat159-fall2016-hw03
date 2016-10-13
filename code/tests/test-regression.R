@@ -31,14 +31,14 @@ test_that ("R square function is working",{
 })
 
 #test the F-statistic function
-test_that ("F-statistic function is working"{
+test_that ("F-statistic function is working",{
    expect_equal(f_statistic(reg),regsum$fstatistic[1])
    expect_length(length(f_statistic(reg)),1)
    expect_gt(f_statistic(reg), 0)
 })
 
 #test the residual_std_error function
-test_that ("RSD function is working" {
+test_that ("RSD function is working",{
    expect_equal(residual_std_error(reg), regsum$sigma)
    expect_length(length(residual_std_error(reg)),1)
    expect_type(residual_std_error(reg),'double')
